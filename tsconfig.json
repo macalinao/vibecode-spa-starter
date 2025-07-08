@@ -1,0 +1,15 @@
+{
+  "extends": ["@macalinao/tsconfig/tsconfig.vite.json"],
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["bun"]
+  },
+  "include": ["src/**/*", "vite.config.ts"]
+}
