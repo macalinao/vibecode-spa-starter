@@ -1,3 +1,5 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowLeft } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
 import { RegistrationForm } from "@/components/forms/registration-form";
 import { Button } from "@/components/ui/button";
@@ -8,9 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
 
 export const Route = createFileRoute("/demo")({
   component: DemoPage,

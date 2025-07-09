@@ -43,3 +43,15 @@ bun.lockb
 
 # TanStack Router
 src/routeTree.gen.ts
+
+# Test results
+playwright-report/
+test-results/
+
+# Devenv
+.devenv/
+.devenv.flake.nix
+.envrc
+devenv.lock
+devenv.nix
+devenv.yaml

@@ -13,7 +13,17 @@ This is a modern web application starter kit built with:
 - **UI Components**: shadcn/ui (accessible, customizable components)
 - **Forms**: React Hook Form + Zod (performant forms with schema validation)
 - **Code Quality**: Biome v2 (fast formatter and linter)
+- **Testing**: Vitest + Playwright (comprehensive testing setup)
 - **Deployment**: Cloudflare Pages
+
+## Purpose
+
+VibeCode Starter Kit accelerates web application development by providing:
+- **Rapid Prototyping**: Get from idea to working prototype quickly
+- **Production Ready**: Built-in testing, linting, and deployment workflows
+- **Type Safety**: End-to-end type safety with TypeScript and Zod validation
+- **AI-Optimized**: Structured for seamless development with Claude Code and AI tools
+- **Scalable Architecture**: Clean patterns that grow with your project
 
 ## Architecture Principles
 
@@ -57,7 +67,43 @@ bun typecheck
 # Linting and formatting
 bun lint
 bun format
+
+# Testing
+bun test              # Run unit tests
+bun test:watch        # Run tests in watch mode
+bun test:coverage     # Run tests with coverage
+bun test:e2e          # Run end-to-end tests
+bun test:all          # Run all tests
 ```
+
+### Testing Strategy
+
+The project includes comprehensive testing setup:
+
+#### Unit Testing
+- **Framework**: Vitest (fast, Vite-native testing)
+- **Library**: React Testing Library (component testing)
+- **Location**: `src/**/__tests__/*.test.{ts,tsx}`
+- **Configuration**: `vitest.config.ts`
+
+#### Integration Testing
+- Test component interactions and form validation
+- Mock external dependencies and APIs
+- Test user workflows and edge cases
+
+#### End-to-End Testing
+- **Framework**: Playwright (cross-browser testing)
+- **Location**: `tests/e2e/*.spec.ts`
+- **Configuration**: `playwright.config.ts`
+- Covers complete user journeys and critical paths
+
+#### Test Writing Guidelines
+1. Use descriptive test names that explain the behavior
+2. Follow the Arrange-Act-Assert pattern
+3. Mock external dependencies and side effects
+4. Test both happy paths and error conditions
+5. Ensure accessibility in component tests
+6. Use proper TypeScript types in tests
 
 ### Adding Components
 Always use the shadcn CLI to add UI components:
@@ -203,6 +249,77 @@ bun format:check
 - [Biome](https://biomejs.dev)
 - [Cloudflare Pages](https://pages.cloudflare.com)
 
+## Claude Code Integration
+
+This starter kit is optimized for use with Claude Code, Anthropic's official CLI for Claude.
+
+### Recommended MCP Servers
+
+Model Context Protocol (MCP) servers extend Claude Code with additional capabilities:
+
+#### Development Tools
+```bash
+# Playwright MCP for E2E testing support
+claude mcp add playwright npx @playwright/test
+
+# GitHub integration for issue tracking and PRs
+claude mcp add github <github-mcp-server-command>
+
+# Database inspection (if using)
+claude mcp add postgres <postgres-mcp-server-command>
+```
+
+#### Productivity MCPs
+```bash
+# Documentation and knowledge bases
+claude mcp add docs <docs-mcp-server-command>
+
+# Project management tools
+claude mcp add linear <linear-mcp-server-command>
+```
+
+### Claude Code Commands
+
+Useful Claude Code commands for this project:
+
+```bash
+# Quick project setup
+claude --resume               # Resume previous conversation
+claude /help                  # Show available commands
+claude /mcp                   # Manage MCP servers
+
+# Development workflow
+claude "Run tests and fix any failures"
+claude "Add a new component with tests"
+claude "Deploy to Cloudflare Pages"
+claude "Review and improve code quality"
+```
+
+### Project Configuration
+
+Create `.claude/settings.local.json` for project-specific settings:
+
+```json
+{
+  "permissions": {
+    "allowRead": ["**/*"],
+    "allowWrite": ["src/**/*", "tests/**/*"],
+    "allowExecute": ["bun", "npm", "git"]
+  },
+  "notifications": {
+    "channels": ["desktop"]
+  }
+}
+```
+
+### Best Practices for Claude Code
+
+1. **Clear Instructions**: Provide specific, actionable requests
+2. **Context**: Reference specific files and line numbers when needed
+3. **Testing**: Always request tests for new functionality
+4. **Code Quality**: Ask Claude to run linting and type checking
+5. **Documentation**: Update this file when adding new patterns
+
 ## Contributing
 
 When contributing to this project:
@@ -211,3 +328,4 @@ When contributing to this project:
 3. Add appropriate TypeScript types
 4. Update this document if introducing new patterns
 5. Test your changes thoroughly before committing
+6. Use Claude Code for consistent development workflows

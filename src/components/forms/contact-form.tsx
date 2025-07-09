@@ -1,3 +1,5 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -14,8 +16,6 @@ import {
   type ContactForm as ContactFormData,
   contactFormSchema,
 } from "@/lib/schemas";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 
 export function ContactForm() {
   const form = useForm<ContactFormData>({
