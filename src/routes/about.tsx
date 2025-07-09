@@ -17,10 +17,13 @@ function AboutPage() {
       </Button>
 
       <div className="prose prose-neutral dark:prose-invert max-w-none">
-        <h1>About VibeCode Starter Kit</h1>
+        <h1>About Vibecode Vite Starter</h1>
+        <p className="lead text-muted-foreground">
+          Created by Ian Macalinao
+        </p>
 
         <p className="lead">
-          This starter kit provides a modern foundation for building web
+          This starter kit by Ian Macalinao provides a modern foundation for building web
           applications with the latest tools and best practices.
         </p>
 
@@ -109,6 +112,33 @@ function AboutPage() {
           Check out the demo page to see examples of forms, components, and
           more!
         </p>
+
+        <h2>About the Creator</h2>
+        <p>
+          <strong>Ian Macalinao</strong> is a software engineer passionate about building
+          modern web applications with cutting-edge technologies. This starter kit
+          represents years of experience in creating scalable, maintainable applications.
+        </p>
+        <p>
+          Connect with Ian:
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/macalinao" target="_blank" rel="noopener noreferrer">
+              GitHub: @macalinao
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ian@macalinao.com">
+              Email: ian@macalinao.com
+            </a>
+          </li>
+          <li>
+            <a href="https://ianmacalinao.com" target="_blank" rel="noopener noreferrer">
+              Website: ianmacalinao.com
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

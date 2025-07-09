@@ -11,10 +11,13 @@ function HomePage() {
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-            Welcome to VibeCode Starter Kit
+            Vibecode Vite Starter
           </h1>
+          <p className="text-lg text-muted-foreground">
+            by Ian Macalinao
+          </p>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A modern, type-safe starter template with React, TypeScript, Vite,
+            A modern, type-safe starter template by Ian Macalinao with React 19, TypeScript, Vite,
             TanStack Router, Tailwind CSS v4, and Cloudflare Pages deployment.
           </p>
         </div>
@@ -49,6 +52,36 @@ function HomePage() {
               End-to-end type safety with TypeScript, Zod, and TanStack Router.
             </p>
           </div>
+        </div>
+
+        <div className="mt-16 text-center text-sm text-muted-foreground">
+          <p>
+            Created by{" "}
+            <a
+              href="https://github.com/macalinao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
+            >
+              Ian Macalinao
+            </a>
+            {" "}•{" "}
+            <a
+              href="https://github.com/macalinao/vibecode-vite-starter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
+            >
+              GitHub
+            </a>
+            {" "}•{" "}
+            <a
+              href="mailto:ian@macalinao.com"
+              className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
+            >
+              Contact
+            </a>
+          </p>
         </div>
       </div>
     </div>

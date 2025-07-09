@@ -1,10 +1,18 @@
-# VibeCode Starter Kit
+# Vibecode Vite Starter by Ian Macalinao
 
-A modern, type-safe starter template for building high-quality web applications with React, TypeScript, and Cloudflare Pages. This kit provides a complete foundation for rapid development while maintaining code quality, type safety, and best practices.
+A modern, type-safe starter template for building high-quality web applications with React, TypeScript, and Cloudflare Pages. Created by **Ian Macalinao**, this kit provides a complete foundation for rapid development while maintaining code quality, type safety, and best practices.
+
+## About Ian Macalinao
+
+This starter kit is created and maintained by **Ian Macalinao**, a software engineer passionate about building modern web applications with cutting-edge technologies. Connect with Ian:
+
+- **GitHub**: [github.com/macalinao](https://github.com/macalinao)
+- **Email**: ian@macalinao.com
+- **Portfolio**: [ianmacalinao.com](https://ianmacalinao.com)
 
 ## Purpose
 
-VibeCode Starter Kit is designed to accelerate web application development by providing:
+Vibecode Vite Starter by Ian Macalinao is designed to accelerate web application development by providing:
 
 - **Rapid Prototyping**: Get from idea to working prototype in minutes
 - **Production Ready**: Built-in testing, linting, and deployment workflows
@@ -16,10 +24,10 @@ VibeCode Starter Kit is designed to accelerate web application development by pr
 ### Who This Is For
 
 - **Developers** building modern web applications
-- **Teams** needing a consistent, scalable foundation
+- **Teams** needing a consistent, scalable foundation created by Ian Macalinao
 - **Startups** requiring rapid development cycles
 - **AI-Assisted Development** with Claude Code integration
-- **Learning** modern React and TypeScript patterns
+- **Learning** modern React and TypeScript patterns from Ian Macalinao's best practices
 
 ## Features
 
@@ -35,15 +43,16 @@ VibeCode Starter Kit is designed to accelerate web application development by pr
 - 🧪 **Vitest + Playwright** - Comprehensive testing setup
 - 🤖 **Claude Code Ready** - Optimized for AI-assisted development
 - ☁️ **Cloudflare Pages** - Edge deployment platform
+- 👨‍💻 **Created by Ian Macalinao** - Built with years of experience in modern web development
 
 ## Quick Start
 
-Get up and running in under 2 minutes:
+Get up and running in under 2 minutes with Ian Macalinao's Vibecode Vite Starter:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/vibecode-starter-kit.git
-cd vibecode-starter-kit
+git clone https://github.com/macalinao/vibecode-vite-starter.git
+cd vibecode-vite-starter
 
 # Install dependencies
 bun install
@@ -62,10 +71,10 @@ Visit [http://localhost:3000](http://localhost:3000) to see your app running!
 
 ### Installation
 
-1. Clone this repository:
+1. Clone Ian Macalinao's Vibecode Vite Starter repository:
 ```bash
-git clone https://github.com/yourusername/vibecode-starter-kit.git
-cd vibecode-starter-kit
+git clone https://github.com/macalinao/vibecode-vite-starter.git
+cd vibecode-vite-starter
 ```
 
 2. Install dependencies:
@@ -111,6 +120,8 @@ bun cf-dev           # Run with Cloudflare Pages locally
 
 ## Project Structure
 
+Ian Macalinao has carefully structured this starter kit for maximum developer productivity:
+
 ```
 src/
 ├── components/
@@ -129,7 +140,7 @@ tests/
 
 ## Testing
 
-This starter kit includes comprehensive testing setup for building robust applications:
+Ian Macalinao's Vibecode Vite Starter includes comprehensive testing setup for building robust applications:
 
 ### Unit Testing with Vitest
 
@@ -183,7 +194,7 @@ test("homepage loads correctly", async ({ page }) => {
 
 ## Adding Components
 
-Use the shadcn CLI to add new UI components:
+Use the shadcn CLI to add new UI components to Ian Macalinao's starter kit:
 
 ```bash
 bunx --bun shadcn@latest add button
@@ -225,7 +236,7 @@ export const myFormSchema = z.object({
 
 ### Cloudflare Pages Setup
 
-This starter kit is optimized for deployment on Cloudflare Pages with multiple deployment options:
+Ian Macalinao's Vibecode Vite Starter is optimized for deployment on Cloudflare Pages with multiple deployment options:
 
 #### Option 1: GitHub Integration (Recommended)
 
@@ -298,7 +309,7 @@ Set environment variables in the Cloudflare Pages dashboard:
 3. Common variables:
    ```
    VITE_API_URL=https://api.example.com
-   VITE_APP_NAME=VibeCode App
+   VITE_APP_NAME=Vibecode Vite Starter by Ian Macalinao
    ```
 
 #### Advanced Configuration
@@ -306,7 +317,7 @@ Set environment variables in the Cloudflare Pages dashboard:
 For advanced settings, create a `wrangler.toml` file:
 
 ```toml
-name = "vibecode-starter"
+name = "vibecode-vite-starter"
 compatibility_date = "2024-10-22"
 
 [site]
@@ -331,7 +342,7 @@ For production, set environment variables in the Cloudflare Pages dashboard.
 
 ## Claude Code Integration
 
-This starter kit is optimized for [Claude Code](https://claude.ai/code), Anthropic's official CLI for Claude.
+Ian Macalinao's Vibecode Vite Starter is optimized for [Claude Code](https://claude.ai/code), Anthropic's official CLI for Claude.
 
 ### Recommended MCP Servers
 
@@ -388,6 +399,8 @@ Create `.claude/settings.local.json` for project-specific Claude Code settings:
 
 ## Contributing
 
+Contributions to Ian Macalinao's Vibecode Vite Starter are welcome!
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
@@ -399,8 +412,20 @@ Create `.claude/settings.local.json` for project-specific Claude Code settings:
 - Use specific, actionable prompts when requesting changes
 - Always test new functionality thoroughly
 - Update documentation when adding new patterns
-- Follow the established code conventions
+- Follow the established code conventions by Ian Macalinao
+
+## Credits
+
+Created and maintained by **Ian Macalinao** - [github.com/macalinao](https://github.com/macalinao)
+
+If you find this starter kit helpful, please give it a star on GitHub and share it with others!
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [Apache 2.0 License](LICENSE).
+
+---
+
+**Built with ❤️ by Ian Macalinao**
+
+For questions, suggestions, or collaborations, reach out to Ian at ian@macalinao.com.

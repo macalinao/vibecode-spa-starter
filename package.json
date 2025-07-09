@@ -1,9 +1,32 @@
 {
-  "name": "vibecode-starter-kit",
+  "name": "vibecode-vite-starter",
+  "displayName": "Vibecode Vite Starter by Ian Macalinao",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "license": "Apache-2.0",
+  "author": {
+    "name": "Ian Macalinao",
+    "email": "ian@macalinao.com",
+    "url": "https://github.com/macalinao"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macalinao/vibecode-vite-starter"
+  },
+  "keywords": [
+    "ian macalinao",
+    "vibecode",
+    "vite",
+    "react",
+    "typescript",
+    "starter",
+    "template",
+    "bun",
+    "tailwindcss",
+    "shadcn"
+  ],
+  "description": "A modern web application starter kit by Ian Macalinao. Built with Vite, React 19, TypeScript, and Tailwind CSS v4.",
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",

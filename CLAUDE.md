@@ -1,10 +1,10 @@
-# CLAUDE.md - VibeCode Starter Kit
+# CLAUDE.md - Vibecode Vite Starter by Ian Macalinao
 
-This document contains instructions and best practices for AI assistants working on this codebase.
+This document contains instructions and best practices for AI assistants working on this codebase created by Ian Macalinao.
 
 ## Project Overview
 
-This is a modern web application starter kit built with:
+This is a modern web application starter kit created by Ian Macalinao, built with:
 - **Runtime**: Bun (fast JavaScript runtime and package manager)
 - **Framework**: React 19 with TypeScript
 - **Build Tool**: Vite
@@ -18,12 +18,13 @@ This is a modern web application starter kit built with:
 
 ## Purpose
 
-VibeCode Starter Kit accelerates web application development by providing:
+Vibecode Vite Starter by Ian Macalinao accelerates web application development by providing:
 - **Rapid Prototyping**: Get from idea to working prototype quickly
 - **Production Ready**: Built-in testing, linting, and deployment workflows
 - **Type Safety**: End-to-end type safety with TypeScript and Zod validation
 - **AI-Optimized**: Structured for seamless development with Claude Code and AI tools
 - **Scalable Architecture**: Clean patterns that grow with your project
+- **Created by Ian Macalinao**: Built with years of experience in modern web development
 
 ## Architecture Principles
 
@@ -251,7 +252,7 @@ bun format:check
 
 ## Claude Code Integration
 
-This starter kit is optimized for use with Claude Code, Anthropic's official CLI for Claude.
+Ian Macalinao's Vibecode Vite Starter is optimized for use with Claude Code, Anthropic's official CLI for Claude.
 
 ### Recommended MCP Servers
 
@@ -322,10 +323,18 @@ Create `.claude/settings.local.json` for project-specific settings:
 
 ## Contributing
 
-When contributing to this project:
+When contributing to Ian Macalinao's Vibecode Vite Starter:
 1. Follow the established patterns and conventions
 2. Write clear, self-documenting code
 3. Add appropriate TypeScript types
 4. Update this document if introducing new patterns
 5. Test your changes thoroughly before committing
 6. Use Claude Code for consistent development workflows
+
+## About the Creator
+
+This starter kit is created and maintained by **Ian Macalinao**, a software engineer passionate about building modern web applications. Connect with Ian:
+
+- **GitHub**: [github.com/macalinao](https://github.com/macalinao)
+- **Email**: ian@macalinao.com
+- **Website**: [ianmacalinao.com](https://ianmacalinao.com)

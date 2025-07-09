@@ -1,3 +1,10 @@
+/**
+ * Vibecode Vite Starter by Ian Macalinao
+ * https://github.com/macalinao/vibecode-vite-starter
+ * 
+ * @author Ian Macalinao <ian@macalinao.com>
+ */
+
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";

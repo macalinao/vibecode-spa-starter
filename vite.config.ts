@@ -1,3 +1,9 @@
+/**
+ * Vite configuration for Vibecode Vite Starter
+ * Created by Ian Macalinao
+ * https://github.com/macalinao/vibecode-vite-starter
+ */
+
 import tailwindcss from "@tailwindcss/vite";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react";
