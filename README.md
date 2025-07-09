@@ -223,19 +223,101 @@ export const myFormSchema = z.object({
 
 ## Deployment
 
-### Cloudflare Pages
+### Cloudflare Pages Setup
 
-1. Build the project:
+This starter kit is optimized for deployment on Cloudflare Pages with multiple deployment options:
+
+#### Option 1: GitHub Integration (Recommended)
+
+1. Fork or push this repository to GitHub
+
+2. Go to [Cloudflare Pages Dashboard](https://dash.cloudflare.com/pages)
+
+3. Click "Create a project" → "Connect to Git"
+
+4. Select your GitHub repository
+
+5. Configure build settings:
+   - **Framework preset**: None
+   - **Build command**: `bun run build`
+   - **Build output directory**: `dist`
+   - **Environment variables**: Add any required variables
+
+6. Click "Save and Deploy"
+
+Your site will now automatically deploy on every push to the main branch!
+
+#### Option 2: Direct Upload
+
+1. Build the project locally:
 ```bash
 bun run build
 ```
 
-2. Deploy to Cloudflare Pages:
+2. Deploy using Wrangler CLI:
 ```bash
 bun run deploy
 ```
 
-Or connect your GitHub repository to Cloudflare Pages for automatic deployments.
+This will upload your `dist` folder directly to Cloudflare Pages.
+
+#### Option 3: GitHub Actions (CI/CD)
+
+The project includes GitHub Actions workflows for automated deployment:
+
+1. Set up these secrets in your GitHub repository:
+   - `CLOUDFLARE_API_TOKEN`: Create at [Cloudflare API Tokens](https://dash.cloudflare.com/profile/api-tokens)
+   - `CLOUDFLARE_ACCOUNT_ID`: Found in your Cloudflare dashboard
+
+2. The deployment will run automatically on push to main branch
+
+3. You can also trigger manual deployments from the Actions tab
+
+### Configuration
+
+#### Build Settings
+
+The project is pre-configured for Cloudflare Pages:
+- **Node version**: 18+ (uses Bun for builds)
+- **Build command**: `bun run build`
+- **Output directory**: `dist`
+- **Environment variables**: Supported via dashboard or `wrangler.toml`
+
+#### Custom Domain
+
+1. Go to your Cloudflare Pages project
+2. Navigate to "Custom domains"
+3. Click "Set up a custom domain"
+4. Follow the DNS configuration steps
+
+#### Environment Variables
+
+Set environment variables in the Cloudflare Pages dashboard:
+1. Go to Settings → Environment variables
+2. Add variables for both Production and Preview environments
+3. Common variables:
+   ```
+   VITE_API_URL=https://api.example.com
+   VITE_APP_NAME=VibeCode App
+   ```
+
+#### Advanced Configuration
+
+For advanced settings, create a `wrangler.toml` file:
+
+```toml
+name = "vibecode-starter"
+compatibility_date = "2024-10-22"
+
+[site]
+bucket = "./dist"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.preview]
+vars = { ENVIRONMENT = "preview" }
+```
 
 ## Environment Variables
 
