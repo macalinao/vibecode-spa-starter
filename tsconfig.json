@@ -9,7 +9,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["bun", "vitest/globals"]
+    "types": ["bun"],
+    "jsx": "react-jsx"
   },
-  "include": ["src/**/*", "vite.config.ts", "vitest.config.ts"]
+  "include": ["src/**/*", "vite.config.ts"]
 }

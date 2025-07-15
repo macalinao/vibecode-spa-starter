@@ -1,7 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 
-export const Route = createFileRoute("/")({
+export const Route = createLazyFileRoute("/")({
   component: HomePage,
 });
 
@@ -13,12 +13,11 @@ function HomePage() {
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
             Vibecode Vite Starter
           </h1>
-          <p className="text-lg text-muted-foreground">
-            by Ian Macalinao
-          </p>
+          <p className="text-lg text-muted-foreground">by Ian Macalinao</p>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A modern, type-safe starter template by Ian Macalinao with React 19, TypeScript, Vite,
-            TanStack Router, Tailwind CSS v4, and Cloudflare Pages deployment.
+            A modern, type-safe starter template by Ian Macalinao with React 19,
+            TypeScript, Vite, TanStack Router, Tailwind CSS v4, and Cloudflare
+            Pages deployment.
           </p>
         </div>
 
@@ -64,8 +63,8 @@ function HomePage() {
               className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
             >
               Ian Macalinao
-            </a>
-            {" "}•{" "}
+            </a>{" "}
+            •{" "}
             <a
               href="https://github.com/macalinao/vibecode-vite-starter"
               target="_blank"
@@ -73,8 +72,8 @@ function HomePage() {
               className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
             >
               GitHub
-            </a>
-            {" "}•{" "}
+            </a>{" "}
+            •{" "}
             <a
               href="mailto:ian@macalinao.com"
               className="font-medium underline underline-offset-4 hover:text-primary transition-colors"

@@ -3,9 +3,6 @@ node_modules
 .pnp
 .pnp.js
 
-# Testing
-coverage
-
 # Production
 dist
 build
@@ -24,7 +21,6 @@ yarn-error.log*
 .env
 .env.local
 .env.development.local
-.env.test.local
 .env.production.local
 
 # IDE
@@ -44,14 +40,7 @@ bun.lockb
 # TanStack Router
 src/routeTree.gen.ts
 
-# Test results
-playwright-report/
-test-results/
-
 # Devenv
 .devenv/
 .devenv.flake.nix
-.envrc
-devenv.lock
-devenv.nix
-devenv.yaml
+.tanstack/

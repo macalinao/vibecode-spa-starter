@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
 import { RegistrationForm } from "@/components/forms/registration-form";
@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export const Route = createFileRoute("/demo")({
+export const Route = createLazyFileRoute("/demo")({
   component: DemoPage,
 });
 

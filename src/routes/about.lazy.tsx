@@ -1,8 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const Route = createFileRoute("/about")({
+export const Route = createLazyFileRoute("/about")({
   component: AboutPage,
 });
 
@@ -18,13 +18,11 @@ function AboutPage() {
 
       <div className="prose prose-neutral dark:prose-invert max-w-none">
         <h1>About Vibecode Vite Starter</h1>
-        <p className="lead text-muted-foreground">
-          Created by Ian Macalinao
-        </p>
+        <p className="lead text-muted-foreground">Created by Ian Macalinao</p>
 
         <p className="lead">
-          This starter kit by Ian Macalinao provides a modern foundation for building web
-          applications with the latest tools and best practices.
+          This starter kit by Ian Macalinao provides a modern foundation for
+          building web applications with the latest tools and best practices.
         </p>
 
         <h2>Tech Stack</h2>
@@ -115,26 +113,31 @@ function AboutPage() {
 
         <h2>About the Creator</h2>
         <p>
-          <strong>Ian Macalinao</strong> is a software engineer passionate about building
-          modern web applications with cutting-edge technologies. This starter kit
-          represents years of experience in creating scalable, maintainable applications.
+          <strong>Ian Macalinao</strong> is a software engineer passionate about
+          building modern web applications with cutting-edge technologies. This
+          starter kit represents years of experience in creating scalable,
+          maintainable applications.
         </p>
-        <p>
-          Connect with Ian:
-        </p>
+        <p>Connect with Ian:</p>
         <ul>
           <li>
-            <a href="https://github.com/macalinao" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/macalinao"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub: @macalinao
             </a>
           </li>
           <li>
-            <a href="mailto:ian@macalinao.com">
-              Email: ian@macalinao.com
-            </a>
+            <a href="mailto:ian@macalinao.com">Email: ian@macalinao.com</a>
           </li>
           <li>
-            <a href="https://ianmacalinao.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://ianmacalinao.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Website: ianmacalinao.com
             </a>
           </li>

@@ -13,14 +13,13 @@ This is a modern web application starter kit created by Ian Macalinao, built wit
 - **UI Components**: shadcn/ui (accessible, customizable components)
 - **Forms**: React Hook Form + Zod (performant forms with schema validation)
 - **Code Quality**: Biome v2 (fast formatter and linter)
-- **Testing**: Vitest + Playwright (comprehensive testing setup)
 - **Deployment**: Cloudflare Pages
 
 ## Purpose
 
 Vibecode Vite Starter by Ian Macalinao accelerates web application development by providing:
 - **Rapid Prototyping**: Get from idea to working prototype quickly
-- **Production Ready**: Built-in testing, linting, and deployment workflows
+- **Production Ready**: Built-in linting and deployment workflows
 - **Type Safety**: End-to-end type safety with TypeScript and Zod validation
 - **AI-Optimized**: Structured for seamless development with Claude Code and AI tools
 - **Scalable Architecture**: Clean patterns that grow with your project
@@ -69,42 +68,7 @@ bun typecheck
 bun lint
 bun format
 
-# Testing
-bun test              # Run unit tests
-bun test:watch        # Run tests in watch mode
-bun test:coverage     # Run tests with coverage
-bun test:e2e          # Run end-to-end tests
-bun test:all          # Run all tests
 ```
-
-### Testing Strategy
-
-The project includes comprehensive testing setup:
-
-#### Unit Testing
-- **Framework**: Vitest (fast, Vite-native testing)
-- **Library**: React Testing Library (component testing)
-- **Location**: `src/**/__tests__/*.test.{ts,tsx}`
-- **Configuration**: `vitest.config.ts`
-
-#### Integration Testing
-- Test component interactions and form validation
-- Mock external dependencies and APIs
-- Test user workflows and edge cases
-
-#### End-to-End Testing
-- **Framework**: Playwright (cross-browser testing)
-- **Location**: `tests/e2e/*.spec.ts`
-- **Configuration**: `playwright.config.ts`
-- Covers complete user journeys and critical paths
-
-#### Test Writing Guidelines
-1. Use descriptive test names that explain the behavior
-2. Follow the Arrange-Act-Assert pattern
-3. Mock external dependencies and side effects
-4. Test both happy paths and error conditions
-5. Ensure accessibility in component tests
-6. Use proper TypeScript types in tests
 
 ### Adding Components
 Always use the shadcn CLI to add UI components:
@@ -168,7 +132,7 @@ Follow this import order:
 - Always use semantic HTML elements
 - Provide proper ARIA labels where needed
 - Ensure keyboard navigation works throughout the app
-- Test with screen readers
+- Ensure proper screen reader support
 - Maintain proper color contrast ratios
 
 ## Deployment
@@ -260,8 +224,6 @@ Model Context Protocol (MCP) servers extend Claude Code with additional capabili
 
 #### Development Tools
 ```bash
-# Playwright MCP for E2E testing support
-claude mcp add playwright npx @playwright/test
 
 # GitHub integration for issue tracking and PRs
 claude mcp add github <github-mcp-server-command>
@@ -290,8 +252,8 @@ claude /help                  # Show available commands
 claude /mcp                   # Manage MCP servers
 
 # Development workflow
-claude "Run tests and fix any failures"
-claude "Add a new component with tests"
+claude "Run linting and fix any errors"
+claude "Add a new component"
 claude "Deploy to Cloudflare Pages"
 claude "Review and improve code quality"
 ```
@@ -304,7 +266,7 @@ Create `.claude/settings.local.json` for project-specific settings:
 {
   "permissions": {
     "allowRead": ["**/*"],
-    "allowWrite": ["src/**/*", "tests/**/*"],
+    "allowWrite": ["src/**/*"],
     "allowExecute": ["bun", "npm", "git"]
   },
   "notifications": {
@@ -317,7 +279,7 @@ Create `.claude/settings.local.json` for project-specific settings:
 
 1. **Clear Instructions**: Provide specific, actionable requests
 2. **Context**: Reference specific files and line numbers when needed
-3. **Testing**: Always request tests for new functionality
+3. **Code Quality**: Ensure proper TypeScript types and linting
 4. **Code Quality**: Ask Claude to run linting and type checking
 5. **Documentation**: Update this file when adding new patterns
 
@@ -328,7 +290,7 @@ When contributing to Ian Macalinao's Vibecode Vite Starter:
 2. Write clear, self-documenting code
 3. Add appropriate TypeScript types
 4. Update this document if introducing new patterns
-5. Test your changes thoroughly before committing
+5. Verify your changes work correctly before committing
 6. Use Claude Code for consistent development workflows
 
 ## About the Creator

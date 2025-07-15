@@ -11,10 +11,14 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [tsconfigPaths(), tanstackRouter(), react(), tailwindcss()],
-  build: {
-    target: "esnext",
-    outDir: "dist",
-    sourcemap: true,
-  },
+  plugins: [
+    tsconfigPaths(),
+    tanstackRouter(),
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler", { target: "19" }]],
+      },
+    }),
+    tailwindcss(),
+  ],
 });
