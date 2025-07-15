@@ -6,7 +6,7 @@ export const userRegistrationSchema = z
     email: z.string().email("Invalid email address"),
     password: z.string().min(8, "Password must be at least 8 characters"),
     confirmPassword: z.string(),
-    agreeToTerms: z.boolean().refine((val) => val === true, {
+    agreeToTerms: z.boolean().refine((val) => val, {
       message: "You must agree to the terms and conditions",
     }),
   })

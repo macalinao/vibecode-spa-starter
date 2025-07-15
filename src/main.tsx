@@ -1,7 +1,7 @@
 /**
  * Vibecode Vite Starter by Ian Macalinao
  * https://github.com/macalinao/vibecode-vite-starter
- * 
+ *
  * @author Ian Macalinao <ian@macalinao.com>
  */
 
@@ -19,8 +19,8 @@ declare module "@tanstack/react-router" {
   }
 }
 
-const rootElement = document.getElementById("root")!;
-if (!rootElement.innerHTML) {
+const rootElement = document.getElementById("root");
+if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>

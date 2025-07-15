@@ -12,7 +12,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { type UserRegistration, userRegistrationSchema } from "@/lib/schemas";
+import type { UserRegistration } from "@/lib/schemas";
+import { userRegistrationSchema } from "@/lib/schemas";
 
 export function RegistrationForm() {
   const form = useForm<UserRegistration>({
@@ -34,7 +35,10 @@ export function RegistrationForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        onSubmit={(e) => void form.handleSubmit(onSubmit)(e)}
+        className="space-y-6"
+      >
         <FormField
           control={form.control}
           name="name"

@@ -336,5 +336,5 @@ When contributing to Ian Macalinao's Vibecode Vite Starter:
 This starter kit is created and maintained by **Ian Macalinao**, a software engineer passionate about building modern web applications. Connect with Ian:
 
 - **GitHub**: [github.com/macalinao](https://github.com/macalinao)
-- **Email**: ian@macalinao.com
+- **Email**: me@ianm.com
 - **Website**: [ianmacalinao.com](https://ianmacalinao.com)

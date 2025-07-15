@@ -12,10 +12,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  type ContactForm as ContactFormData,
-  contactFormSchema,
-} from "@/lib/schemas";
+import type { ContactForm as ContactFormData } from "@/lib/schemas";
+import { contactFormSchema } from "@/lib/schemas";
 
 export function ContactForm() {
   const form = useForm<ContactFormData>({
@@ -37,7 +35,10 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        onSubmit={(e) => void form.handleSubmit(onSubmit)(e)}
+        className="space-y-6"
+      >
         <FormField
           control={form.control}
           name="name"
