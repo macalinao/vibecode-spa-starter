@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import tanstackRouter from "@tanstack/eslint-plugin-router";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
@@ -6,13 +7,14 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ["dist", "node_modules"],
+    ignores: ["dist", "node_modules", "src/routeTree.gen.ts"],
   },
   {
     extends: [
       js.configs.recommended,
       ...tseslint.configs.strictTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
+      ...tanstackRouter.configs["flat/recommended"],
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -26,6 +28,7 @@ export default tseslint.config(
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      "@tanstack/router": tanstackRouter,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,

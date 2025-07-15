@@ -44,3 +44,6 @@ src/routeTree.gen.ts
 .devenv/
 .devenv.flake.nix
 .tanstack/
+
+# ESLint cache
+.eslintcache
